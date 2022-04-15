@@ -1,12 +1,17 @@
 .sidebar{
-    flex:3;
+    width: 400px;
     margin: 20px;
+    height: 400px;
+    position: sticky;
+    top: 50px;
+    right: 0;
     padding-bottom: 30px ;
-    background-color: #e9e9e9;
+    background-color: #ffffff;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
 
 .sidebarItem{
@@ -18,7 +23,6 @@
 .sidebarTitle{
     margin: 10px;
     padding: 5px;
-    width: 80%;
     border-top: 1px solid #a7a4a4;
     border-bottom: 1px solid #a7a4a4;
     font-family: 'Varela Round',sans-serif;
@@ -44,7 +48,6 @@
 
 .sidebarListItem{
     display: inline-block;
-    width: 50%;
     margin-top: 15px;
     cursor: pointer;
     
@@ -67,7 +70,6 @@
 
 .sidebarSocial{
     margin-top: 15px;
-    width: 250px;
     display: flex;
     align-items: center;
     justify-content: center;

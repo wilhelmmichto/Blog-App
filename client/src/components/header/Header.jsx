@@ -1,5 +1,5 @@
 import './header.css'
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 
@@ -12,6 +12,7 @@ export default function Header() {
   const handleLogout = () => {
     dispatch({ type: "LOGOUT" });
   };
+
   return (
     <div className="header">
       <div className="headerleft">
@@ -19,17 +20,7 @@ export default function Header() {
         </div>
         <div className="headerright">
           <ul className="headList">
-            <li className="headListItem">
-              <Link className="headerlink" to="/">
-                HOME
-              </Link>
-            </li>
-            <li className="headListItem">
-              <Link className="headerlink" to="/write">
-                WRITE
-              </Link>
-            </li>
-            <li className="headListItem">
+          {/* <li className="headListItem">
               {user ? (
                 <Link to="/settings">
                   <img
@@ -52,14 +43,25 @@ export default function Header() {
                         src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
                         alt=""
                       />
-                      login
+                      
                     </Link>
                   </li>
                 </ul>
               )}
+            </li> */}
+            <li className="headListItem">
+              <Link className="headerlink" to="/">
+                HOME
+              </Link>
             </li>
             <li className="headListItem">
-              <Link className="headerlink" to="/categories">
+              <Link className="headerlink" to="/write">
+                WRITE
+              </Link>
+            </li>
+            
+            <li className="headListItem">
+              <Link className="headerlink" to="/about">
                 CATEGORIES
               </Link>
             </li>
@@ -73,6 +75,7 @@ export default function Header() {
               )}
             </li>
           </ul>
+          
         </div>
       </div>
     

@@ -1,4 +1,16 @@
+.homes{
+    height: 100vh;
+    background-color: #e9e9e9;
+}
 .home{
     display: flex;
-    background-color: #e9e9e9;
+    
+}
+
+.loading{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex: 6;
+    font-size: 50px;
 }

@@ -10,7 +10,7 @@ import axios from 'axios';
 export default function Home() {
   const [posts,setPosts] = useState([]);
   const {search} = useLocation();
-
+  const [loader, setloader] = useState(true);
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -18,20 +18,26 @@ export default function Home() {
     setPosts(res.data)
     }
     fetchPosts();
+    setloader(false)
   }, [search]);
 
   return (
-    <>
+    <div className='homes'>
     {/* <Topbar/> */}
       <Header/>
       <div className="home">
-        <Posts posts={posts} />
+      {loader ? (
+                <span className="loading">loading...</span>
+              ) : (
+                <Posts posts={posts}   />
+              )}
         <Sidebar />
+        
       </div>
       
       <Topbar/>
 
-    </>
+    </div>
   );
 
 }

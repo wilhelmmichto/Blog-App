@@ -7,8 +7,7 @@ import Single from "./pages/single/Single";
 import Write from "./pages/write/Write";
 import { useContext } from "react";
 import { Context } from "./context/Context";
-import Sidebar from "./components/sidebar/Sidebar";
-
+import Menu from "./components/menu/Menu"
 function App() {
   const { user } = useContext(Context)
 
@@ -21,7 +20,7 @@ function App() {
       <Route  path='/write' element={user ? <Write/>  : <Register/>}/>
       <Route  path='/settings' element={user ? <Settings/> : <Register/>}/>
       <Route  path='/post/:postId' element={<Single/>}/>
-      <Route path='/categories' element={<Sidebar/>}/>
+      <Route path='/about' element={<Menu/>}/>
     </Routes>
   </div>
 
